@@ -11,6 +11,7 @@ webbplats på en domän som hör till företaget.
 | Dragonäventyret | `dragonaventyret/index.html` |
 | Integritet, Dragonäventyret | `dragonaventyret/integritet.html` |
 | Draklekar | `draklekar/index.html` |
+| Himlaskären (världen bakom spelen) | `himlaskaren/index.html` |
 | Integritet, Draklekar | `draklekar/integritet.html` |
 
 Integritetssidornas adresser kan klistras in direkt i App Store Connect
