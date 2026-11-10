@@ -1,0 +1,293 @@
+/* MLZ AB – gemensam stil för företagssidan och spelsidorna.
+   Färgerna är hämtade ur spelens målningar: natthimmel, pergament, glöd och guld. */
+
+@font-face {
+  font-family: "IM Fell English";
+  src: url("typsnitt/IMFellEnglish-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IM Fell English";
+  src: url("typsnitt/IMFellEnglish-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Baloo 2";
+  src: url("typsnitt/Baloo2-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --natt: #13213a;
+  --natt-djup: #0b1526;
+  --pergament: #f7eedb;
+  --pergament-mork: #ecdcbc;
+  --black: #2b2118;
+  --black-mjuk: #5a4a3a;
+  --guld: #c9902c;
+  --guld-ljus: #f2c66b;
+  --glod: #e06b2f;
+  --turkos: #2aa59a;
+  --lov: #5f8a3a;
+  --rund: 22px;
+  --skugga: 0 18px 40px -18px rgba(20, 14, 6, 0.55);
+  --bredd: 1120px;
+  --rubrik: "IM Fell English", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --knapp: "Baloo 2", ui-rounded, "Avenir Next", system-ui, sans-serif;
+  --brod: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--pergament);
+  color: var(--black);
+  font-family: var(--brod);
+  font-size: 1.075rem;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: #8a4d12; text-underline-offset: 3px; }
+a:hover { color: var(--glod); }
+h1, h2, h3 { font-family: var(--rubrik); font-weight: 400; line-height: 1.12; margin: 0 0 0.4em; text-wrap: balance; }
+h1 { font-size: clamp(2.6rem, 7vw, 5rem); }
+h2 { font-size: clamp(2rem, 4.4vw, 3rem); }
+h3 { font-size: clamp(1.35rem, 2.4vw, 1.7rem); }
+p { margin: 0 0 1em; text-wrap: pretty; }
+.inre { width: min(var(--bredd), 100% - 32px); margin-inline: auto; }
+.smal { max-width: 680px; }
+.mitt { text-align: center; margin-inline: auto; }
+.overrubrik {
+  font-family: var(--knapp); font-weight: 700; font-size: 0.85rem;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--guld);
+  margin-bottom: 0.6em;
+}
+.ingress { font-size: clamp(1.15rem, 2vw, 1.35rem); color: var(--black-mjuk); }
+
+/* ---------- Toppfält ---------- */
+.topp {
+  position: absolute; inset: 0 0 auto 0; z-index: 10;
+  padding: 18px 0;
+}
+.topp .inre { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.marke {
+  font-family: var(--rubrik); font-size: 1.6rem; color: #fff; text-decoration: none;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5); display: flex; align-items: center; gap: 10px;
+}
+.marke img { width: 40px; height: 40px; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4)); }
+.marke:hover { color: var(--guld-ljus); }
+.meny { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+.meny a {
+  font-family: var(--knapp); font-weight: 700; color: #fff; text-decoration: none;
+  padding: 6px 14px; border-radius: 999px; background: rgba(11, 21, 38, 0.35);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); font-size: 0.95rem;
+}
+.meny a:hover, .meny a[aria-current] { background: rgba(242, 198, 107, 0.9); color: var(--natt-djup); }
+
+/* ---------- Hjältebild ---------- */
+.hjalte {
+  position: relative; min-height: min(92vh, 900px); display: flex; align-items: flex-end;
+  color: #fff; overflow: hidden; background: var(--natt);
+}
+.hjalte > .bakgrund {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  animation: andas 26s ease-in-out infinite alternate;
+}
+.hjalte::after {
+  content: ""; position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(11,21,38,0.55) 0%, rgba(11,21,38,0) 22%),
+    linear-gradient(0deg, rgba(11,21,38,0.92) 0%, rgba(11,21,38,0.55) 32%, rgba(11,21,38,0) 62%);
+}
+.hjalte .inre { position: relative; z-index: 2; padding: 120px 0 clamp(48px, 8vh, 96px); }
+.hjalte h1 { text-shadow: 0 4px 24px rgba(0,0,0,0.5); margin-bottom: 0.2em; }
+.hjalte .ingress { color: #f4ead6; max-width: 620px; text-shadow: 0 2px 12px rgba(0,0,0,0.6); }
+.hjalte .overrubrik { color: var(--guld-ljus); }
+@keyframes andas { from { transform: scale(1.02); } to { transform: scale(1.08) translateY(-1%); } }
+
+.drakpar {
+  position: absolute; z-index: 3; right: max(16px, calc(50% - 600px)); bottom: 6%;
+  display: flex; align-items: flex-end; pointer-events: none;
+}
+.drakpar img { width: clamp(120px, 17vw, 240px); filter: drop-shadow(0 12px 18px rgba(0,0,0,0.45)); }
+.drakpar img:first-child { animation: sväva 4.2s ease-in-out infinite; }
+.drakpar img:last-child { margin-left: -24px; animation: sväva 4.8s ease-in-out -1.5s infinite; }
+@keyframes sväva { 0%,100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-14px) rotate(1.5deg); } }
+
+/* ---------- Knappar ---------- */
+.knappar { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 1.4em; }
+.knapp {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--knapp); font-weight: 700; font-size: 1.05rem;
+  padding: 12px 24px; border-radius: 999px; text-decoration: none;
+  background: linear-gradient(180deg, var(--guld-ljus), var(--guld));
+  color: var(--natt-djup); box-shadow: 0 8px 20px -8px rgba(201,144,44,0.9), inset 0 1px 0 rgba(255,255,255,0.6);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.knapp:hover { transform: translateY(-2px); color: var(--natt-djup); }
+.knapp.ihalig { background: rgba(255,255,255,0.12); color: #fff; box-shadow: inset 0 0 0 2px rgba(255,255,255,0.6); }
+.knapp.ihalig:hover { background: rgba(255,255,255,0.22); color: #fff; }
+.etikett {
+  display: inline-block; font-family: var(--knapp); font-weight: 700; font-size: 0.85rem;
+  padding: 4px 12px; border-radius: 999px; background: rgba(242,198,107,0.18);
+  color: var(--guld-ljus); border: 1px solid rgba(242,198,107,0.45);
+}
+
+/* ---------- Sektioner ---------- */
+.del { padding: clamp(64px, 10vw, 120px) 0; }
+.del.natt { background: var(--natt); color: #efe5d0; }
+.del.natt h2, .del.natt h3 { color: #fff; }
+.del.natt .ingress { color: #cfc2a6; }
+.del.natt a { color: var(--guld-ljus); }
+.del.morkpergament { background: var(--pergament-mork); }
+.stjarnhimmel {
+  background:
+    radial-gradient(1200px 500px at 20% -10%, rgba(42,165,154,0.18), transparent 60%),
+    radial-gradient(900px 500px at 90% 110%, rgba(224,107,47,0.18), transparent 60%),
+    var(--natt);
+}
+
+/* Två kolumner: bild och text */
+.par { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
+.par + .par { margin-top: clamp(56px, 8vw, 104px); }
+.par.vand > :first-child { order: 2; }
+.ram {
+  border-radius: var(--rund); overflow: hidden; box-shadow: var(--skugga);
+  border: 6px solid #fffaf0; background: #fffaf0; transform: rotate(-0.8deg);
+}
+.par.vand .ram { transform: rotate(0.8deg); }
+.ram img { width: 100%; }
+.del.natt .ram { border-color: #26344f; background: #26344f; }
+
+/* Kort */
+.kort-rutnat { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; }
+.kort {
+  background: #fffaf0; border-radius: var(--rund); padding: 26px 24px; box-shadow: var(--skugga);
+  border: 1px solid rgba(201,144,44,0.25);
+}
+.kort img.ikon { width: 112px; height: 112px; object-fit: contain; margin: -8px auto 8px; }
+.kort h3 { margin-bottom: 0.3em; }
+.kort p { margin: 0; color: var(--black-mjuk); font-size: 1rem; }
+.del.natt .kort { background: #1c2c49; border-color: rgba(242,198,107,0.2); }
+.del.natt .kort p { color: #cfc2a6; }
+
+/* Galleri */
+.galleri { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+.galleri figure { margin: 0; border-radius: 16px; overflow: hidden; box-shadow: var(--skugga); background: #000; position: relative; }
+.galleri figure img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.galleri figure:hover img { transform: scale(1.04); }
+.galleri figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 16px 12px; font-size: 0.95rem;
+  color: #fff; background: linear-gradient(0deg, rgba(0,0,0,0.7), transparent);
+}
+.g6 { grid-column: span 6; } .g4 { grid-column: span 4; } .g8 { grid-column: span 8; } .g12 { grid-column: span 12; }
+
+/* Citat */
+.citat {
+  font-family: var(--rubrik); font-style: italic; font-size: clamp(1.4rem, 3vw, 2rem); line-height: 1.4;
+  margin: 0; color: inherit;
+}
+.citat-rad { display: grid; grid-template-columns: auto 1fr; gap: clamp(20px, 4vw, 48px); align-items: center; }
+.citat-rad img { width: clamp(140px, 20vw, 240px); filter: drop-shadow(0 12px 18px rgba(0,0,0,0.35)); }
+.signatur { font-family: var(--knapp); font-weight: 700; color: var(--guld); margin-top: 1em; font-style: normal; font-size: 1rem; }
+
+/* Löften till föräldrar */
+.loften { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px 28px; }
+.loften li { padding-left: 36px; position: relative; }
+.loften li::before {
+  content: ""; position: absolute; left: 0; top: 0.35em; width: 20px; height: 20px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, var(--guld-ljus), var(--guld) 60%, #8a5a12);
+  box-shadow: 0 0 12px rgba(242,198,107,0.7);
+}
+.loften strong { display: block; font-family: var(--knapp); font-size: 1.1rem; }
+
+/* Spelkort på startsidan */
+.spel-par { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.spelkort {
+  position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 520px;
+  border-radius: 28px; overflow: hidden; color: #fff; text-decoration: none; box-shadow: var(--skugga);
+  isolation: isolate;
+}
+.spelkort > img.bakgrund { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transition: transform .8s ease; }
+.spelkort::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, rgba(11,21,38,0.95) 0%, rgba(11,21,38,0.4) 45%, rgba(11,21,38,0) 70%); }
+.spelkort:hover > img.bakgrund { transform: scale(1.05); }
+.spelkort .text { padding: 28px; }
+.spelkort h3 { font-size: clamp(1.9rem, 3.4vw, 2.6rem); color: #fff; }
+.spelkort p { color: #e9dec6; margin-bottom: 1em; }
+.spelkort .figur { position: absolute; top: 22px; right: 22px; width: 34%; max-width: 190px; filter: drop-shadow(0 10px 16px rgba(0,0,0,0.45)); animation: sväva 5s ease-in-out infinite; }
+.spelkort:hover { color: #fff; }
+.spelkort .las { font-family: var(--knapp); font-weight: 700; color: var(--guld-ljus); }
+
+/* Draklekar: lekar med ikon */
+.lekar { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; }
+.lek { background: #fffaf0; border-radius: 20px; padding: 16px 12px 18px; text-align: center; box-shadow: 0 10px 24px -16px rgba(20,14,6,0.6); }
+.lek img { width: 96px; height: 96px; object-fit: contain; margin: 0 auto 8px; transition: transform .3s ease; }
+.lek:hover img { transform: scale(1.1) rotate(-3deg); }
+.lek strong { display: block; font-family: var(--knapp); font-size: 1.05rem; }
+.lek span { font-size: 0.9rem; color: var(--black-mjuk); line-height: 1.4; display: block; margin-top: 2px; }
+
+/* Telefonramar för stående skärmbilder */
+.telefoner { display: flex; justify-content: center; gap: clamp(14px, 3vw, 32px); flex-wrap: wrap; }
+.telefon {
+  width: clamp(200px, 24vw, 270px); aspect-ratio: 9 / 16; border-radius: 34px; overflow: hidden;
+  border: 9px solid #1a1a1f; background: #1a1a1f; box-shadow: var(--skugga);
+}
+.telefon:nth-child(2) { transform: translateY(-28px); }
+.telefon img { width: 100%; height: 100%; object-fit: cover; }
+.telefon-text { text-align: center; margin-top: 12px; font-size: 0.95rem; color: var(--black-mjuk); }
+
+/* Fot */
+.fot { background: var(--natt-djup); color: #b8ad95; padding: 56px 0 40px; font-size: 0.95rem; }
+.fot .inre { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px; }
+.fot h4 { font-family: var(--rubrik); font-weight: 400; color: #fff; font-size: 1.3rem; margin: 0 0 0.5em; }
+.fot a { color: var(--guld-ljus); }
+.fot ul { list-style: none; margin: 0; padding: 0; }
+.fot li { margin-bottom: 6px; }
+.fot .liten { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.85rem; }
+
+/* Textsida (integritet) */
+.textsida { padding: 140px 0 80px; }
+.textsida h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); }
+.textsida h2 { font-size: 1.6rem; margin-top: 1.6em; }
+.textsida .topp .marke, .textsida .topp .meny a { text-shadow: none; }
+.ljus-topp { background: var(--natt); position: absolute; inset: 0 0 auto 0; height: 84px; }
+
+/* Synas vid skroll */
+.syns { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+.syns.inne { opacity: 1; transform: none; }
+.ingen-js .syns { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .syns { opacity: 1; transform: none; }
+}
+
+@media (max-width: 860px) {
+  .par, .spel-par, .citat-rad { grid-template-columns: 1fr; }
+  .par.vand > :first-child { order: 0; }
+  .citat-rad img { margin: 0 auto; }
+  .g6, .g4, .g8 { grid-column: span 12; }
+  .fot .inre { grid-template-columns: 1fr; }
+  .spelkort { min-height: 440px; }
+  .drakpar { right: 8px; bottom: auto; top: 96px; }
+  .drakpar img { width: 104px; }
+  .telefon:nth-child(2) { transform: none; }
+  .meny a { padding: 5px 10px; font-size: 0.85rem; }
+  .marke span { display: none; }
+}
+@media (max-width: 520px) {
+  .telefon { width: calc(50% - 10px); border-width: 6px; border-radius: 24px; }
+  .telefon:nth-child(3) { display: none; }
+}
+
+/* Två telefoner bredvid text */
+.par-telefoner { flex-wrap: nowrap; }
+.par-telefoner .telefon { width: min(46%, 240px); }
+@media (max-width: 520px) { .par-telefoner .telefon { width: calc(50% - 10px); } .par-telefoner .telefon { transform: none !important; } }
