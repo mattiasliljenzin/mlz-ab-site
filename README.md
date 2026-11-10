@@ -72,8 +72,7 @@ till exempel Loopia, One.com eller Namecheap) med företagets organisationsnumme
   de stämmer överens.
 - Kontaktadressen på sidan är `contact@mlz-labs.com`, på samma domän som
   sidan, vilket Apple ser som ett tecken på att domänen hör till företaget.
-- Organisationsnumret kan gärna stå i sidfoten på `index.html`, raden
-  `Spelutveckling för barn och familjer.`
+- Organisationsnumret (559491-0407) och orten står i sidfoten på alla sidor.
 
 ## Ändra texter och bilder
 
