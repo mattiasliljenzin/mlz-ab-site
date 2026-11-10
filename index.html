@@ -7,18 +7,30 @@
   <meta name="description" content="MLZ AB är en liten svensk spelstudio som gör mysiga, handmålade spel som barn och vuxna spelar tillsammans: Dragonäventyret och Draklekar.">
   <meta property="og:title" content="MLZ AB – målade spel för barn och familjer">
   <meta property="og:description" content="Mysiga, handmålade spel som barn och vuxna spelar tillsammans.">
-  <meta property="og:image" content="bilder/mlz/himlaskaren.webp">
   <meta property="og:type" content="website">
+  <link rel="canonical" href="https://mlz-labs.com/">
+  <meta property="og:url" content="https://mlz-labs.com/">
+  <meta property="og:image" content="https://mlz-labs.com/bilder/dela/mlz.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="MLZ AB">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="typsnitt/IMFellEnglish-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="bilder/mlz/himlaskaren-mobil.webp" media="(max-aspect-ratio: 4/3)" fetchpriority="high">
+  <link rel="preload" as="image" href="bilder/mlz/himlaskaren.webp" imagesrcset="bilder/mlz/himlaskaren-800.webp 800w, bilder/mlz/himlaskaren-1200.webp 1200w, bilder/mlz/himlaskaren.webp 1800w" imagesizes="100vw" media="(min-aspect-ratio: 4/3)" fetchpriority="high">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "MLZ AB", "url": "https://mlz-labs.com/", "logo": "https://mlz-labs.com/bilder/mlz/favicon.png", "email": "contact@mlz-labs.com", "taxID": "559491-0407", "address": {"@type": "PostalAddress", "addressLocality": "Knivsta", "addressCountry": "SE"}}</script>
   <meta name="theme-color" content="#13213a">
   <link rel="icon" type="image/png" href="bilder/mlz/favicon.png">
   <link rel="apple-touch-icon" href="bilder/mlz/favicon.png">
   <link rel="stylesheet" href="stil.css">
 </head>
 <body>
+<a class="hoppa" href="#innehall">Hoppa till innehållet</a>
 
 <header class="topp">
   <div class="inre">
-    <a class="marke" href="./"><img src="bilder/mlz/luma.webp" alt="" width="40" height="40"> <span>MLZ&nbsp;AB</span></a>
+    <a class="marke" href="./" aria-label="MLZ AB, till startsidan"><img decoding="async" src="bilder/mlz/luma-liten.webp" alt="" width="96" height="96"> <span>MLZ&nbsp;AB</span></a>
     <nav class="meny" aria-label="Huvudmeny">
       <a href="dragonaventyret/">Dragonäventyret</a>
       <a href="draklekar/">Draklekar</a>
@@ -27,9 +39,12 @@
   </div>
 </header>
 
-<main>
+<main id="innehall">
   <section class="hjalte">
-    <img class="bakgrund" src="bilder/mlz/himlaskaren.webp" alt="Himlaskären: svävande öar med skogar, slott och vattenfall ovanför molnen" width="1800" height="1200" fetchpriority="high">
+    <picture>
+      <source media="(max-aspect-ratio: 4/3)" srcset="bilder/mlz/himlaskaren-mobil.webp">
+      <img class="bakgrund" src="bilder/mlz/himlaskaren.webp" srcset="bilder/mlz/himlaskaren-480.webp 480w, bilder/mlz/himlaskaren-800.webp 800w, bilder/mlz/himlaskaren-1200.webp 1200w, bilder/mlz/himlaskaren.webp 1800w" sizes="100vw" alt="Himlaskären: svävande öar med skogar, slott och vattenfall ovanför molnen" width="1800" height="1200" fetchpriority="high">
+    </picture>
     <div class="inre">
       <p class="overrubrik">MLZ AB · Spelstudio i Sverige</p>
       <h1>Handmålade spel<br>att spela tillsammans</h1>
@@ -51,8 +66,8 @@
 
       <div class="spel-par" style="margin-top:48px">
         <a class="spelkort syns" href="dragonaventyret/">
-          <img class="bakgrund" src="bilder/dragon/lyktglantan.webp" alt="" loading="lazy" width="1600" height="900">
-          <img class="figur" src="bilder/dragon/gul-svep.webp" alt="" loading="lazy" width="700" height="358">
+          <img decoding="async" class="bakgrund" src="bilder/dragon/lyktglantan-kort.webp" alt="" loading="lazy" width="800" height="800">
+          <img decoding="async" class="figur" src="bilder/dragon/gul-svep.webp" alt="" loading="lazy" width="420" height="214">
           <div class="text">
             <span class="etikett">Plattformsäventyr · 1–2 spelare · från 5 år</span>
             <h3 style="margin-top:12px">Dragonäventyret</h3>
@@ -61,8 +76,8 @@
           </div>
         </a>
         <a class="spelkort syns" href="draklekar/">
-          <img class="bakgrund" src="bilder/draklekar/bg-solglantan.webp" alt="" loading="lazy" width="600" height="800">
-          <img class="figur" src="bilder/draklekar/album.webp" alt="" loading="lazy" width="420" height="420">
+          <img decoding="async" class="bakgrund" src="bilder/draklekar/kort.webp" alt="" loading="lazy" width="600" height="800">
+          <img decoding="async" class="figur" src="bilder/draklekar/album.webp" alt="" loading="lazy" width="380" height="380">
           <div class="text">
             <span class="etikett">Lek och lär · iPhone och iPad · från 4 år</span>
             <h3 style="margin-top:12px">Draklekar</h3>
@@ -94,7 +109,7 @@
 
   <section class="del">
     <div class="inre par">
-      <div class="ram syns"><img src="bilder/dragon/solvinge.webp" alt="Målning: en gul drake blåser eld på en svävande sten ovanför molnen" loading="lazy" width="1600" height="900"></div>
+      <div class="ram syns"><img decoding="async" src="bilder/dragon/solvinge.webp" srcset="bilder/dragon/solvinge-480.webp 480w, bilder/dragon/solvinge-800.webp 800w, bilder/dragon/solvinge-1200.webp 1200w, bilder/dragon/solvinge.webp 1600w" sizes="(max-width: 860px) 100vw, 590px" alt="Målning: en gul drake blåser eld på en svävande sten ovanför molnen" loading="lazy" width="1600" height="900"></div>
       <div class="syns">
         <p class="overrubrik">Om MLZ AB</p>
         <h2>En liten studio med stora drömmar</h2>
@@ -119,19 +134,19 @@
 <footer class="fot">
   <div class="inre">
     <div>
-      <h4>MLZ AB</h4>
+      <p class="fot-rubrik">MLZ AB</p>
       <p>Spelutveckling för barn och familjer.<br>Org.nr 559491-0407<br>Knivsta, Sverige</p>
       <p><a href="mailto:contact@mlz-labs.com">contact@mlz-labs.com</a></p>
     </div>
     <div>
-      <h4>Spel</h4>
+      <p class="fot-rubrik">Spel</p>
       <ul>
         <li><a href="dragonaventyret/">Dragonäventyret</a></li>
         <li><a href="draklekar/">Draklekar</a></li>
       </ul>
     </div>
     <div>
-      <h4>Integritet</h4>
+      <p class="fot-rubrik">Integritet</p>
       <ul>
         <li><a href="dragonaventyret/integritet.html">Dragonäventyret</a></li>
         <li><a href="draklekar/integritet.html">Draklekar</a></li>

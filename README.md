@@ -21,6 +21,17 @@ Alla bilder är målningar och skärmbilder ur spelen, konverterade till WebP
 `typsnitt/` med sina OFL-licenser, så sidan hämtar ingenting från andra
 servrar och sätter inga kakor.
 
+## Bilder och prestanda
+
+- Stora bilder finns i flera bredder (`-480`, `-800`, `-1200`) och väljs med
+  `srcset`, så mobilen hämtar små filer.
+- Toppbilderna har en stående variant (`-mobil.webp`) för telefoner.
+- Typsnitten är beskurna till latinska tecken och svenska bokstäver (cirka
+  130 kB totalt).
+- Delningsbilder för Facebook, Messenger och liknande ligger i `bilder/dela/`
+  (1200x630).
+- `sitemap.xml`, `robots.txt` och `404.html` ligger i roten.
+
 ## Titta på sidan lokalt
 
 ```sh
