@@ -18,8 +18,9 @@ Integritetssidornas adresser kan klistras in direkt i App Store Connect
 
 Alla bilder är målningar och skärmbilder ur spelen, konverterade till WebP
 (hela sidan är cirka 5 MB). Typsnitten (IM Fell English, Baloo 2) ligger i
-`typsnitt/` med sina OFL-licenser, så sidan hämtar ingenting från andra
-servrar och sätter inga kakor.
+`typsnitt/` med sina OFL-licenser. Det enda som hämtas från en annan server är
+skriptet för Cloudflare Web Analytics, som räknar besök anonymt utan kakor
+(statistiken finns i Cloudflare under Analytics & Logs → Web Analytics).
 
 ## Bilder och prestanda
 
