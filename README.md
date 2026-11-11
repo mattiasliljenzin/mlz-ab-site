@@ -8,9 +8,9 @@ webbplats på en domän som hör till företaget.
 | Sida | Fil |
 |---|---|
 | Företagssidan | `index.html` |
-| Fjäll och Vinge: Glödvägen (hette Dragonäventyret; adressen ligger kvar, `/glodvagen/` skickar vidare hit) | `dragonaventyret/index.html` |
+| Pyre och Nos: Glödvägen (hette Dragonäventyret; adressen ligger kvar, `/glodvagen/` skickar vidare hit) | `dragonaventyret/index.html` |
 | Integritet, Glödvägen | `dragonaventyret/integritet.html` |
-| Fjäll och Vinge: Draklekar | `draklekar/index.html` |
+| Pyre och Nos: Draklekar | `draklekar/index.html` |
 | Himlaskären (världen bakom spelen) | `himlaskaren/index.html` |
 | Integritet, Draklekar | `draklekar/integritet.html` |
 
