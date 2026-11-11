@@ -147,7 +147,7 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .del.natt h2, .del.natt h3 { color: #fff; }
 .del.natt .ingress { color: #cfc2a6; }
 .del.natt .overrubrik { color: var(--guld-ljus); }
-.del.natt a { color: var(--guld-ljus); }
+.del.natt a:not(.knapp) { color: var(--guld-ljus); }
 .del.morkpergament { background: var(--pergament-mork); }
 .stjarnhimmel {
   background:
