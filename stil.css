@@ -330,3 +330,7 @@ a:focus-visible, .knapp:focus-visible { outline: 3px solid var(--guld-ljus); out
 @media (max-width: 520px) { .meny { gap: 4px; flex-wrap: nowrap; } .meny a { padding: 5px 8px; font-size: 0.78rem; } .meny a[href$="#kontakt"] { display: none; } .topp .inre { gap: 8px; } }
 .marke { flex-shrink: 0; }
 @media (max-width: 359px) { .meny a { padding: 4px 6px; font-size: 0.7rem; } }
+
+/* Serienamnet ovanför speltiteln */
+.serie { display: block; font-size: 0.42em; font-style: italic; letter-spacing: 0.02em; margin-bottom: 0.15em; color: var(--guld-ljus); }
+h3 .serie { font-size: 0.55em; }
