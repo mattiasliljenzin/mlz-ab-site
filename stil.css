@@ -334,3 +334,11 @@ a:focus-visible, .knapp:focus-visible { outline: 3px solid var(--guld-ljus); out
 /* Serienamnet ovanför speltiteln */
 .serie { display: block; font-size: 0.42em; font-style: italic; letter-spacing: 0.02em; margin-bottom: 0.15em; color: var(--guld-ljus); }
 h3 .serie { font-size: 0.55em; }
+
+/* Skärmbilder ur vuxenläget */
+.vuxenbilder { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2.4vw, 28px); align-items: start; }
+.vuxenbilder figure { margin: 0; }
+.vuxenbilder img { display: block; width: 100%; height: auto; border-radius: 18px; box-shadow: var(--skugga); background: #ecdfc0; padding: 10px; }
+.vuxenbilder figcaption { margin-top: 14px; font-size: 0.98rem; color: var(--black-mjuk); }
+.vuxenbilder figcaption strong { display: block; font-family: var(--knapp); font-size: 1.1rem; color: var(--black); }
+@media (max-width: 860px) { .vuxenbilder { grid-template-columns: 1fr; max-width: 460px; margin-inline: auto; gap: 32px; } }
