@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="sv" class="ingen-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sagoboken: Pyre och Nos och den första gryningen · MLZ AB</title>
+  <meta name="description" content="Hela sagan ur spelet Pyre och Nos: Glödvägen, berättad av Gammelmor Glimma. Sju kapitel att läsa högt, ett per kväll, med alla målningar.">
+  <meta property="og:title" content="Sagoboken: Pyre och Nos och den första gryningen">
+  <meta property="og:description" content="Hela sagan ur Glödvägen, sju kapitel att läsa högt, ett per kväll.">
+  <meta property="og:type" content="book">
+  <link rel="canonical" href="https://mlz-labs.com/sagoboken/">
+  <meta property="og:url" content="https://mlz-labs.com/sagoboken/">
+  <meta property="og:image" content="https://mlz-labs.com/bilder/dela/sagoboken.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="MLZ AB">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="../typsnitt/IMFellEnglish-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <meta name="theme-color" content="#13213a">
+  <link rel="icon" type="image/png" href="../bilder/mlz/favicon.png">
+  <link rel="stylesheet" href="../stil.css">
+  <style>
+    .hjalte.bok .inre { text-align: center; }
+    .hjalte.bok .ingress { margin-inline: auto; }
+    .hjalte.bok .knappar { justify-content: center; }
+    .glimma-rad { display: grid; grid-template-columns: 200px 1fr; gap: 32px; align-items: center; }
+    .glimma-rad img { width: 200px; }
+    .glimma-rad blockquote { font-family: var(--rubrik); font-style: italic; font-size: 1.45rem; line-height: 1.5; margin: 0; }
+    .innehall-lista { list-style: none; padding: 0; margin: 1.2em auto 0; max-width: 520px; text-align: left; }
+    .innehall-lista li { border-bottom: 1px solid rgba(117,73,10,0.2); }
+    .innehall-lista a { display: flex; gap: 14px; align-items: baseline; padding: 12px 4px; font-family: var(--rubrik); font-size: 1.35rem; color: var(--black); text-decoration: none; }
+    .innehall-lista a:hover { color: var(--glod); }
+    .innehall-lista span { font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--guld-mork); min-width: 8.5em; }
+    .kapitelkort { position: relative; margin: 0; }
+    .kapitelkort img { width: 100%; max-height: 82vh; object-fit: cover; }
+    .kapitelrubrik { position: absolute; inset: 0 0 auto 0; padding: clamp(24px, 6vw, 72px) 16px 0; text-align: center; }
+    .kapitelrubrik::before { content: ""; position: absolute; inset: -10% 10% -40%; background: radial-gradient(closest-side, rgba(252,244,228,0.88), rgba(252,244,228,0)); z-index: -1; }
+    .kapitelrubrik { z-index: 1; isolation: isolate; }
+    .kapitelrubrik h2 { font-size: clamp(2.2rem, 6vw, 4rem); margin: 0; }
+    .kapitelrubrik .overrubrik { color: var(--guld-mork); margin-bottom: 0.2em; }
+    .kapitelrubrik .rad { font-family: var(--rubrik); font-style: italic; font-size: clamp(1rem, 2.2vw, 1.3rem); margin: 0.4em 0 0; }
+    .sidor { max-width: 900px; padding-block: clamp(40px, 7vw, 80px); }
+    .sagosida { margin: 0 0 clamp(40px, 7vw, 72px); }
+    .sagosida figcaption { font-family: var(--rubrik); font-size: clamp(1.2rem, 2.6vw, 1.55rem); line-height: 1.5; margin: 0.9em auto 0; max-width: 760px; text-wrap: pretty; }
+    .vidare { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; justify-content: center; margin: 0; }
+    .slutord { font-family: var(--rubrik); font-style: italic; font-size: 1.6rem; }
+    .om-boken { font-size: 0.95rem; color: var(--black-mjuk); }
+    @media (max-width: 640px) {
+      .hjalte.bok h1 { font-size: 2.3rem; }
+      .hjalte.bok .ingress { font-size: 1rem; }
+      .hjalte.bok .bakgrund { object-position: 50% 0; }
+      .hjalte.bok .overrubrik { font-size: 0.75rem; }
+      .glimma-rad { grid-template-columns: 1fr; text-align: center; }
+      .glimma-rad img { width: 150px; margin-inline: auto; }
+      .kapitelkort img { aspect-ratio: 4 / 3; }
+    }
+  </style>
+</head>
+<body>
+<a class="hoppa" href="#innehall">Hoppa till innehållet</a>
+
+<header class="topp">
+  <div class="inre">
+    <a class="marke" href="../" aria-label="MLZ AB, till startsidan"><img decoding="async" src="../bilder/mlz/luma-liten.webp" alt="" width="96" height="96"> <span>MLZ&nbsp;AB</span></a>
+    <nav class="meny" aria-label="Huvudmeny">
+      <a href="../dragonaventyret/">Glödvägen</a>
+      <a href="../draklekar/">Draklekar</a>
+      <a href="../himlaskaren/">Himlaskären</a>
+      <a href="./" aria-current="page">Sagoboken</a>
+      <a href="../#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="innehall">
+  <section class="hjalte bok">
+    <picture>
+      <source media="(max-aspect-ratio: 4/5)" srcset="../bilder/saga/b-0-omslag-1086.webp">
+      <img class="bakgrund" src="../bilder/saga/b-0b-omslag-liggande-1424.webp" srcset="../bilder/saga/b-0b-omslag-liggande-800.webp 800w, ../bilder/saga/b-0b-omslag-liggande-1424.webp 1424w" sizes="100vw" alt="Omslaget: Pyre och Nos flyger mot Stora Eken i gryningen, och Askan tittar från en klippa" width="1424" height="1105" fetchpriority="high">
+    </picture>
+    <div class="inre">
+      <p class="overrubrik">Sagan ur Glödvägen · Berättad av Gammelmor Glimma</p>
+      <h1>Pyre och Nos och den första gryningen</h1>
+      <p class="ingress">Hela sagan från spelet, i sju kapitel att läsa högt. Ett kapitel per kväll, för barn från fyra år och de som läser för dem.</p>
+      <div class="knappar"><a class="knapp" href="#kapitel-1">Börja läsa</a><a class="knapp ihalig" href="#innehall-lista">Kapitlen</a></div>
+    </div>
+  </section>
+
+  <section class="del morkpergament">
+    <div class="inre smal glimma-rad">
+      <img class="syns" decoding="async" src="../bilder/saga/glimma-portratt.webp" alt="Gammelmor Glimma, en gammal lysfluga med lövkappa och käpp" width="520" height="520">
+      <blockquote class="syns">Kom närmare, lilla vän, och ta en filt. Nu ska jag berätta om två små drakar som gick ut i världen för att hämta hem ljuset. Det är en lång saga, så vi tar ett kapitel i kväll och nästa i morgon.</blockquote>
+    </div>
+  </section>
+
+  <section class="del" id="innehall-lista">
+    <div class="inre smal mitt">
+      <p class="overrubrik">Innehåll</p>
+      <h2>Sju kvällar med Glimma</h2>
+      <ol class="innehall-lista">
+        <li><a href="#kapitel-1"><span>Kapitel ett</span> Skolvägen</a></li>
+        <li><a href="#kapitel-2"><span>Kapitel två</span> Skären vaknar</a></li>
+        <li><a href="#kapitel-3"><span>Kapitel tre</span> Över Solbron</a></li>
+        <li><a href="#kapitel-4"><span>Kapitel fyra</span> Till världens kant</a></li>
+        <li><a href="#kapitel-5"><span>Kapitel fem</span> Silverspåret</a></li>
+        <li><a href="#kapitel-6"><span>Kapitel sex</span> Askans val</a></li>
+        <li><a href="#kapitel-7"><span>Kapitel sju</span> Den första gryningen</a></li>
+        <li><a href="#slutet"><span>Sagans slut</span> Slutet</a></li>
+        <li><a href="#askan"><span>Efter sagan</span> Och Askan då?</a></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="kapitel" id="kapitel-1">
+    <header class="kapitelkort">
+      <img decoding="async" src="../bilder/saga/k1-kort-1600.webp" srcset="../bilder/saga/k1-kort-800.webp 800w, ../bilder/saga/k1-kort-1600.webp 1600w" sizes="100vw" alt="Kapitelbild: Skolvägen" width="1600" height="900" loading="lazy">
+      <div class="kapitelrubrik"><p class="overrubrik">Kapitel ett</p><h2>Skolvägen</h2><p class="rad">Den första vägen hemma i skogen: sju lyktor och en gryning.</p></div>
+    </header>
+    <div class="inre sidor">
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/solvinge-first-ember-1600.webp" srcset="../bilder/saga/solvinge-first-ember-800.webp 800w, ../bilder/saga/solvinge-first-ember-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: För länge, länge sedan föll en stjärna ner i molnen" width="1600" height="900" loading="lazy"></div>
+      <figcaption>För länge, länge sedan föll en stjärna ner i molnen. Den låg där och glödde, och ur glöden kläcktes den allra första draken. Hon hette Solvinge.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/himlaskaren-map-1600.webp" srcset="../bilder/saga/himlaskaren-map-800.webp 800w, ../bilder/saga/himlaskaren-map-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Solvinge blåste varm eld på stenarna som flöt i molnen" width="1600" height="1066" loading="lazy"></div>
+      <figcaption>Solvinge blåste varm eld på stenarna som flöt i molnen. Då steg stenarna uppåt och blev små öar, med skog och ängar och små hus. Det är Himlaskären.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/dygnshjulet-1600.webp" srcset="../bilder/saga/dygnshjulet-800.webp 800w, ../bilder/saga/dygnshjulet-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Lysflugorna och urmakarna byggde ett stort hjul som bar ljuset runt, så att alla fick både dag och natt" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Lysflugorna och urmakarna byggde ett stort hjul som bar ljuset runt, så att alla fick både dag och natt. Men hjulet blev gammalt. En dag glömde det hur man gör, och då kom skymningen.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/glomskan-1600.webp" srcset="../bilder/saga/glomskan-800.webp 800w, ../bilder/saga/glomskan-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Där ljuset tog slut växte törnen, och kalla vindar började blåsa" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Där ljuset tog slut växte törnen, och kalla vindar började blåsa. Folk glömde de gamla vägarna, och ibland varandra. Det kallas Glömskan. Men vänta bara, nu kommer det fina.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/eggs-roots-1600.webp" srcset="../bilder/saga/eggs-roots-800.webp 800w, ../bilder/saga/eggs-roots-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: En kväll flög lysflugan Lysa in under Stora Ekens rötter" width="1600" height="900" loading="lazy"></div>
+      <figcaption>En kväll flög lysflugan Lysa in under Stora Ekens rötter. Där låg två ägg, alldeles kalla. Lysa höll sin lilla ekollonlykta tätt intill dem och bar hem dem, så försiktigt hon bara kunde.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/hatching-1600.webp" srcset="../bilder/saga/hatching-800.webp 800w, ../bilder/saga/hatching-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Hela vintern väntade vi" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Hela vintern väntade vi. Jag stickade filtar och Lysa lyste, och alla i gläntan kom förbi och tittade. Och en natt hördes det: knack, knack. Äggen sprack!</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/b-2-tva-sma-eldar-1600.webp" srcset="../bilder/saga/b-2-tva-sma-eldar-800.webp 800w, ../bilder/saga/b-2-tva-sma-eldar-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Ur det ena ägget kom en drakunge med eld som guld" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Ur det ena ägget kom en drakunge med eld som guld. Det var Pyre. Ur det andra kom en drakunge med eld som klart vatten. Det var Nos. De nyste, och små gnistor flög över hela golvet.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/b-3-sju-lyktor-1600.webp" srcset="../bilder/saga/b-3-sju-lyktor-800.webp 800w, ../bilder/saga/b-3-sju-lyktor-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Sju lyktor gör en gryning, sa jag till dem" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Sju lyktor gör en gryning, sa jag till dem. Gå Glödvägen och tänd dem, en i taget. Värm, så flyger ni.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/b-4-skolvagen-1600.webp" srcset="../bilder/saga/b-4-skolvagen-800.webp 800w, ../bilder/saga/b-4-skolvagen-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Det blåste kallt i Kalla vinden, och uppe i Ekollonkronan sov en väktare som inte ville vakna" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Det blåste kallt i Kalla vinden, och uppe i Ekollonkronan sov en väktare som inte ville vakna. Men Pyre och Nos hjälptes åt. Den ena värmde och den andra lyste, och lykta efter lykta tändes längs vägen.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/b-5-gryningen-1600.webp" srcset="../bilder/saga/b-5-gryningen-800.webp 800w, ../bilder/saga/b-5-gryningen-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: När den sjunde lyktan tändes uppe vid Stormklockan hände något som ingen hade sett på länge" width="1600" height="900" loading="lazy"></div>
+      <figcaption>När den sjunde lyktan tändes uppe vid Stormklockan hände något som ingen hade sett på länge. Det blev morgon i gläntan. Riktig morgon, med sol.</figcaption>
+    </figure>
+      <p class="vidare"><a class="knapp" href="#kapitel-2">Skären vaknar →</a> <a href="#innehall-lista">Till innehållet</a></p>
+    </div>
+  </section>
+  <section class="kapitel" id="kapitel-2">
+    <header class="kapitelkort">
+      <img decoding="async" src="../bilder/saga/k2-kort-1600.webp" srcset="../bilder/saga/k2-kort-800.webp 800w, ../bilder/saga/k2-kort-1600.webp 1600w" sizes="100vw" alt="Kapitelbild: Skären vaknar" width="1600" height="900" loading="lazy">
+      <div class="kapitelrubrik"><p class="overrubrik">Kapitel två</p><h2>Skären vaknar</h2><p class="rad">Ut över molnhavet till fyren och de sovande skären.</p></div>
+    </header>
+    <div class="inre sidor">
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k2-1-farval-1600.webp" srcset="../bilder/saga/k2-1-farval-800.webp 800w, ../bilder/saga/k2-1-farval-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Sju lyktor brann i Stora Eken, och alla vänner från skolvägen kom för att vinka: ugglorna, den gamla ekostubben och ett helt moln av lysflugor" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Sju lyktor brann i Stora Eken, och alla vänner från skolvägen kom för att vinka: ugglorna, den gamla ekostubben och ett helt moln av lysflugor. Pyre och Nos vinkade tillbaka tills tassarna blev trötta.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k2-2-skuggan-1600.webp" srcset="../bilder/saga/k2-2-skuggan-800.webp 800w, ../bilder/saga/k2-2-skuggan-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Men när kvällen kom såg Nos något på en gren långt borta" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Men när kvällen kom såg Nos något på en gren långt borta. En grå drake, med vingar som var lite för stora. Den tittade på dem en stund. Sedan flög den sin väg.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k2-3-utsikten-1600.webp" srcset="../bilder/saga/k2-3-utsikten-800.webp 800w, ../bilder/saga/k2-3-utsikten-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Lysa flög upp högst i trädet, och drakarna klättrade efter" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Lysa flög upp högst i trädet, och drakarna klättrade efter. Titta, sa hon och pekade. Därute, över molnhavet, vaknar skären.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k2-4-fyren-1600.webp" srcset="../bilder/saga/k2-4-fyren-800.webp 800w, ../bilder/saga/k2-4-fyren-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Allra längst bort stod en gammal fyr på en klippa" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Allra längst bort stod en gammal fyr på en klippa. Ingen hade tänt den på länge, länge. Fåglarna hade byggt bon på balkongen.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k2-5-vaskan-1600.webp" srcset="../bilder/saga/k2-5-vaskan-800.webp 800w, ../bilder/saga/k2-5-vaskan-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Jag packade en liten väska till var och en: en filt, en glödsten och en kaka" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Jag packade en liten väska till var och en: en filt, en glödsten och en kaka. Man ska aldrig ge sig ut utan kaka. Och var rädda om varandra, sa jag.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k2-6-avfarden-1600.webp" srcset="../bilder/saga/k2-6-avfarden-800.webp 800w, ../bilder/saga/k2-6-avfarden-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Och så flög de ut över molnhavet, längre bort än de någonsin hade varit" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Och så flög de ut över molnhavet, längre bort än de någonsin hade varit. Lysa flög före med sin lykta, och bakom dem blev gläntan mindre och mindre.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/b-6-fyren-tands-1600.webp" srcset="../bilder/saga/b-6-fyren-tands-800.webp 800w, ../bilder/saga/b-6-fyren-tands-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Uppe i fyren stod en stor lampa, kall och dammig" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Uppe i fyren stod en stor lampa, kall och dammig. Pyre och Nos blåste i den tillsammans, och då vaknade den. Ljuset svepte ut över molnen, långt, långt bort.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/b-7-skaret-vaknar-1600.webp" srcset="../bilder/saga/b-7-skaret-vaknar-800.webp 800w, ../bilder/saga/b-7-skaret-vaknar-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Där ljuset nuddade molnen gnäste ett skär sig i sömnen" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Där ljuset nuddade molnen gnäste ett skär sig i sömnen. Det hade sovit så länge att det sjunkit ner i dimman. Nu lyfte det sig, sakta, och det rasslade av glada fåglar.</figcaption>
+    </figure>
+      <p class="vidare"><a class="knapp" href="#kapitel-3">Över Solbron →</a> <a href="#innehall-lista">Till innehållet</a></p>
+    </div>
+  </section>
+  <section class="kapitel" id="kapitel-3">
+    <header class="kapitelkort">
+      <img decoding="async" src="../bilder/saga/k3-kort-1600.webp" srcset="../bilder/saga/k3-kort-800.webp 800w, ../bilder/saga/k3-kort-1600.webp 1600w" sizes="100vw" alt="Kapitelbild: Över Solbron" width="1600" height="900" loading="lazy">
+      <div class="kapitelrubrik"><p class="overrubrik">Kapitel tre</p><h2>Över Solbron</h2><p class="rad">Den gamla vägen och väktarna som har sovit sedan Glömskan.</p></div>
+    </header>
+    <div class="inre sidor">
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k3-1-valen-1600.webp" srcset="../bilder/saga/k3-1-valen-800.webp 800w, ../bilder/saga/k3-1-valen-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Molnvalen bar drakarna hela vägen tillbaka, och fyren lyste efter dem" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Molnvalen bar drakarna hela vägen tillbaka, och fyren lyste efter dem. Valen sjöng en låg, mjuk sång som kittlade i magen.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k3-2-bron-1600.webp" srcset="../bilder/saga/k3-2-bron-800.webp 800w, ../bilder/saga/k3-2-bron-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Från fyrens topp såg de något som ingen hade sett på länge: en bro av sten, ända bort till andra sidan" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Från fyrens topp såg de något som ingen hade sett på länge: en bro av sten, ända bort till andra sidan.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k3-3-kartan-1600.webp" srcset="../bilder/saga/k3-3-kartan-800.webp 800w, ../bilder/saga/k3-3-kartan-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Det är Solbron, sa jag och pekade på min gamla karta" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Det är Solbron, sa jag och pekade på min gamla karta. Där gick den gamla vägen, innan Glömskan.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k3-4-vaktarna-1600.webp" srcset="../bilder/saga/k3-4-vaktarna-800.webp 800w, ../bilder/saga/k3-4-vaktarna-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Bortom bron sov väktarna" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Bortom bron sov väktarna. De hade vaktat så länge att de glömt varför.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k3-5-varsamt-1600.webp" srcset="../bilder/saga/k3-5-varsamt-800.webp 800w, ../bilder/saga/k3-5-varsamt-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Men ingen behövde vara rädd" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Men ingen behövde vara rädd. Den som sover vill bara bli väckt varsamt. Pyre och Nos värmde Mosskungens kalla näsa, och han log i sömnen innan han ens hade vaknat.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k3-6-overgangen-1600.webp" srcset="../bilder/saga/k3-6-overgangen-800.webp 800w, ../bilder/saga/k3-6-overgangen-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Så gick de över Solbron, och gläntan blev en liten ljusprick bakom dem" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Så gick de över Solbron, och gläntan blev en liten ljusprick bakom dem.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/b-8-smaragddalen-1600.webp" srcset="../bilder/saga/b-8-smaragddalen-800.webp 800w, ../bilder/saga/b-8-smaragddalen-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: I Smaragddalen växte kristaller överallt, grå och släckta" width="1600" height="900" loading="lazy"></div>
+      <figcaption>I Smaragddalen växte kristaller överallt, grå och släckta. Pyres eld fick dem att lysa som honung, och Nos eld fick dem att lysa som mynta. Snart var hela dalen en regnbåge.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/b-9-manljuset-1600.webp" srcset="../bilder/saga/b-9-manljuset-800.webp 800w, ../bilder/saga/b-9-manljuset-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: I Månljusets rike var det alltid kväll" width="1600" height="900" loading="lazy"></div>
+      <figcaption>I Månljusets rike var det alltid kväll. Där tände drakarna små månlyktor, och framför dem växte vägar av månsken som man kunde gå på.</figcaption>
+    </figure>
+      <p class="vidare"><a class="knapp" href="#kapitel-4">Till världens kant →</a> <a href="#innehall-lista">Till innehållet</a></p>
+    </div>
+  </section>
+  <section class="kapitel" id="kapitel-4">
+    <header class="kapitelkort">
+      <img decoding="async" src="../bilder/saga/k4-kort-1600.webp" srcset="../bilder/saga/k4-kort-800.webp 800w, ../bilder/saga/k4-kort-1600.webp 1600w" sizes="100vw" alt="Kapitelbild: Till världens kant" width="1600" height="900" loading="lazy">
+      <div class="kapitelrubrik"><p class="overrubrik">Kapitel fyra</p><h2>Till världens kant</h2><p class="rad">Vinden, urtiden, runorna och stjärnorna längst bort.</p></div>
+    </header>
+    <div class="inre sidor">
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k4-1-flytten-1600.webp" srcset="../bilder/saga/k4-1-flytten-800.webp 800w, ../bilder/saga/k4-1-flytten-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Mosskungen flyttade hem till Lyktgläntan, och månens väktare lyste dem farväl" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Mosskungen flyttade hem till Lyktgläntan, och månens väktare lyste dem farväl.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k4-2-tornet-1600.webp" srcset="../bilder/saga/k4-2-tornet-800.webp 800w, ../bilder/saga/k4-2-tornet-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: På Solbrons bortersta torn satt den grå draken igen" width="1600" height="900" loading="lazy"></div>
+      <figcaption>På Solbrons bortersta torn satt den grå draken igen. När drakarna vinkade flög han sin väg, lite för fort, som någon som inte vet vad man gör när någon vinkar.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k4-3-vinden-1600.webp" srcset="../bilder/saga/k4-3-vinden-800.webp 800w, ../bilder/saga/k4-3-vinden-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Vinden ropade från väster" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Vinden ropade från väster. Där börjar vägar som ingen karta visar.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k4-4-dalen-1600.webp" srcset="../bilder/saga/k4-4-dalen-800.webp 800w, ../bilder/saga/k4-4-dalen-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Långt borta fanns en dal där tiden hade somnat, och höga djur betade bland ormbunkarna" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Långt borta fanns en dal där tiden hade somnat, och höga djur betade bland ormbunkarna.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/b-10b-langnacken-1600.webp" srcset="../bilder/saga/b-10b-langnacken-800.webp 800w, ../bilder/saga/b-10b-langnacken-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Klippan var för hög att flyga över" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Klippan var för hög att flyga över. Men en långnacke böjde ner sitt huvud, och drakarna fick åka uppöver, hela vägen till toppen. Drakarna nickade tack, och djuret blinkade sakta tillbaka.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k4-5-kanten-1600.webp" srcset="../bilder/saga/k4-5-kanten-800.webp 800w, ../bilder/saga/k4-5-kanten-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Och längst bort av allt låg världens kant, där stjärnorna börjar" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Och längst bort av allt låg världens kant, där stjärnorna börjar.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/b-11-stjarnorna-1600.webp" srcset="../bilder/saga/b-11-stjarnorna-800.webp 800w, ../bilder/saga/b-11-stjarnorna-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Där ute flöt små stenar bland stjärnorna, och drakarna hoppade från den ena till den andra" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Där ute flöt små stenar bland stjärnorna, och drakarna hoppade från den ena till den andra. Det var det högsta de någonsin hade varit.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k4-6-hemma-1600.webp" srcset="../bilder/saga/k4-6-hemma-800.webp 800w, ../bilder/saga/k4-6-hemma-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Var rädda om varandra, sa jag när de kom hem" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Var rädda om varandra, sa jag när de kom hem. Och kom hem till kvällen. Sedan kramade jag dem tills de fnissade.</figcaption>
+    </figure>
+      <p class="vidare"><a class="knapp" href="#kapitel-5">Silverspåret →</a> <a href="#innehall-lista">Till innehållet</a></p>
+    </div>
+  </section>
+  <section class="kapitel" id="kapitel-5">
+    <header class="kapitelkort">
+      <img decoding="async" src="../bilder/saga/k5-kort-1600.webp" srcset="../bilder/saga/k5-kort-800.webp 800w, ../bilder/saga/k5-kort-1600.webp 1600w" sizes="100vw" alt="Kapitelbild: Silverspåret" width="1600" height="900" loading="lazy">
+      <div class="kapitelrubrik"><p class="overrubrik">Kapitel fem</p><h2>Silverspåret</h2><p class="rad">Vem tar lyktorna? Ett spår av silver leder norrut.</p></div>
+    </header>
+    <div class="inre sidor">
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k5-1-hjulet-1600.webp" srcset="../bilder/saga/k5-1-hjulet-800.webp 800w, ../bilder/saga/k5-1-hjulet-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Dygnshjulet vaknade och började snurra" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Dygnshjulet vaknade och började snurra. Det mindes allt som det hade sett.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k5-2-minnet-1600.webp" srcset="../bilder/saga/k5-2-minnet-800.webp 800w, ../bilder/saga/k5-2-minnet-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Det visade en bild ur minnet: en grå drake som tog en lykta, försiktigt, som någon som fryser" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Det visade en bild ur minnet: en grå drake som tog en lykta, försiktigt, som någon som fryser.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k5-3-fjadern-1600.webp" srcset="../bilder/saga/k5-3-fjadern-800.webp 800w, ../bilder/saga/k5-3-fjadern-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Hemma i gläntan saknades två lyktor" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Hemma i gläntan saknades två lyktor. Bara en grå fjäder låg kvar i gräset.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k5-4-glimma-1600.webp" srcset="../bilder/saga/k5-4-glimma-800.webp 800w, ../bilder/saga/k5-4-glimma-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Han tar inte för att vara elak, sa jag tyst" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Han tar inte för att vara elak, sa jag tyst. Han tar för att han fryser. Han heter Askan.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k5-5-sparet-1600.webp" srcset="../bilder/saga/k5-5-sparet-800.webp 800w, ../bilder/saga/k5-5-sparet-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Ett svagt silverspår glittrade i mörkret, och det ledde norrut" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Ett svagt silverspår glittrade i mörkret, och det ledde norrut.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k5-6-marknaden-1600.webp" srcset="../bilder/saga/k5-6-marknaden-800.webp 800w, ../bilder/saga/k5-6-marknaden-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Först gick spåret till en marknad under rötterna, där alla byter och ingen glömmer" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Först gick spåret till en marknad under rötterna, där alla byter och ingen glömmer.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/b-12-manglasbron-1600.webp" srcset="../bilder/saga/b-12-manglasbron-800.webp 800w, ../bilder/saga/b-12-manglasbron-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: I Nattvik tog vägen slut vid en mörk sjö" width="1600" height="900" loading="lazy"></div>
+      <figcaption>I Nattvik tog vägen slut vid en mörk sjö. Då kom Askan, utan ett ord. Hans eld lyste silvervit, och i dess ljus syntes en bro av månglas som ingen annan eld kunde se. Sedan var han borta igen.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/b-13-drombubblor-1600.webp" srcset="../bilder/saga/b-13-drombubblor-800.webp 800w, ../bilder/saga/b-13-drombubblor-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: I Drömbrunnen steg stora, skimrande bubblor, och i varje bubbla fanns en dröm" width="1600" height="900" loading="lazy"></div>
+      <figcaption>I Drömbrunnen steg stora, skimrande bubblor, och i varje bubbla fanns en dröm. Drakarna svävade uppåt i dem, mjukt som i en säng.</figcaption>
+    </figure>
+      <p class="vidare"><a class="knapp" href="#kapitel-6">Askans val →</a> <a href="#innehall-lista">Till innehållet</a></p>
+    </div>
+  </section>
+  <section class="kapitel" id="kapitel-6">
+    <header class="kapitelkort">
+      <img decoding="async" src="../bilder/saga/k6-kort-1600.webp" srcset="../bilder/saga/k6-kort-800.webp 800w, ../bilder/saga/k6-kort-1600.webp 1600w" sizes="100vw" alt="Kapitelbild: Askans val" width="1600" height="900" loading="lazy">
+      <div class="kapitelrubrik"><p class="overrubrik">Kapitel sex</p><h2>Askans val</h2><p class="rad">Kyla och tystnad uppe i norr, och ett val som ingen kan göra åt någon annan.</p></div>
+    </header>
+    <div class="inre sidor">
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k6-1-trappan-1600.webp" srcset="../bilder/saga/k6-1-trappan-800.webp 800w, ../bilder/saga/k6-1-trappan-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: De sjunkna skären steg upp ur molnen, ett efter ett, som en trappa" width="1600" height="900" loading="lazy"></div>
+      <figcaption>De sjunkna skären steg upp ur molnen, ett efter ett, som en trappa.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k6-2-aggen-1600.webp" srcset="../bilder/saga/k6-2-aggen-800.webp 800w, ../bilder/saga/k6-2-aggen-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: I Drömbrunnen hade de sett Askans minne: två kalla ägg i snön, och bara det ena kläcktes" width="1600" height="900" loading="lazy"></div>
+      <figcaption>I Drömbrunnen hade de sett Askans minne: två kalla ägg i snön, och bara det ena kläcktes.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k6-3-lagerelden-1600.webp" srcset="../bilder/saga/k6-3-lagerelden-800.webp 800w, ../bilder/saga/k6-3-lagerelden-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Han tror att han är ensam, sa Lysa vid lägerelden" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Han tror att han är ensam, sa Lysa vid lägerelden. Men ingen är ensam på riktigt.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k6-4-tornet-1600.webp" srcset="../bilder/saga/k6-4-tornet-800.webp 800w, ../bilder/saga/k6-4-tornet-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Spåret ledde förbi ett torn fullt av klockor, och sedan upp mot det kalla norr" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Spåret ledde förbi ett torn fullt av klockor, och sedan upp mot det kalla norr.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/b-14-agget-1600.webp" srcset="../bilder/saga/b-14-agget-800.webp 800w, ../bilder/saga/b-14-agget-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Under isen på Frostkanten låg det andra ägget, kallt men inte borta" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Under isen på Frostkanten låg det andra ägget, kallt men inte borta. Pyre och Nos smälte isen så varsamt de kunde och bar ägget i famnen, genom norrskenet, till ett varmt bo vid Askbergets port.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k6-5-norrskenet-1600.webp" srcset="../bilder/saga/k6-5-norrskenet-800.webp 800w, ../bilder/saga/k6-5-norrskenet-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Där uppe brann norrskenet, och någonstans i berget fanns en grotta full av lyktor" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Där uppe brann norrskenet, och någonstans i berget fanns en grotta full av lyktor.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k6-6-modet-1600.webp" srcset="../bilder/saga/k6-6-modet-800.webp 800w, ../bilder/saga/k6-6-modet-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Pyre och Nos höll varandra i tassen" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Pyre och Nos höll varandra i tassen. Det var dags att möta den grå draken.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/b-15-varmevagen-1600.webp" srcset="../bilder/saga/b-15-varmevagen-800.webp 800w, ../bilder/saga/b-15-varmevagen-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Grottan var full av lyktor och ändå kall" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Grottan var full av lyktor och ändå kall. Det gamla värmespåret i berget var trasigt, så värmen rann ut genom springorna. Drakarna tände skål efter skål, och Askan tittade från skuggan.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/b-16-askans-val-1600.webp" srcset="../bilder/saga/b-16-askans-val-800.webp 800w, ../bilder/saga/b-16-askans-val-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: När den sista skålen tändes blev grottan varm, för första gången" width="1600" height="900" loading="lazy"></div>
+      <figcaption>När den sista skålen tändes blev grottan varm, för första gången. Askan stod länge och tittade på sina lyktor. Sedan lyfte han ner en av dem. Den här ska tillbaka, sa han. Ingen bad honom. Han valde själv.</figcaption>
+    </figure>
+      <p class="vidare"><a class="knapp" href="#kapitel-7">Den första gryningen →</a> <a href="#innehall-lista">Till innehållet</a></p>
+    </div>
+  </section>
+  <section class="kapitel" id="kapitel-7">
+    <header class="kapitelkort">
+      <img decoding="async" src="../bilder/saga/k7-kort-1600.webp" srcset="../bilder/saga/k7-kort-800.webp 800w, ../bilder/saga/k7-kort-1600.webp 1600w" sizes="100vw" alt="Kapitelbild: Den första gryningen" width="1600" height="900" loading="lazy">
+      <div class="kapitelrubrik"><p class="overrubrik">Kapitel sju</p><h2>Den första gryningen</h2><p class="rad">Alla vänner följer med för att väcka Solvinge.</p></div>
+    </header>
+    <div class="inre sidor">
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k7-1-tillbaka-1600.webp" srcset="../bilder/saga/k7-1-tillbaka-800.webp 800w, ../bilder/saga/k7-1-tillbaka-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Nästa morgon stod det en korg vid min dörr" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Nästa morgon stod det en korg vid min dörr. Askan bar själv tillbaka lyktorna, en i taget, och hängde upp dem där de hörde hemma. Ingen hade bett honom om det.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k7-2-silversken-1600.webp" srcset="../bilder/saga/k7-2-silversken-800.webp 800w, ../bilder/saga/k7-2-silversken-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Och i den varma grottan, där det aldrig hade varit varmt förut, sprack det andra ägget" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Och i den varma grottan, där det aldrig hade varit varmt förut, sprack det andra ägget. Ut kröp en liten drake med en låga av silver. Hon hette Silversken. Min Askan, sa hon.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k7-3-klippan-1600.webp" srcset="../bilder/saga/k7-3-klippan-800.webp 800w, ../bilder/saga/k7-3-klippan-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Uppe vid stjärnorna vände sig Solvinge i sömnen" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Uppe vid stjärnorna vände sig Solvinge i sömnen. Men hon var för kall för att vakna.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k7-4-fem-1600.webp" srcset="../bilder/saga/k7-4-fem-800.webp 800w, ../bilder/saga/k7-4-fem-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Värmen från förr finns kvar, sa jag" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Värmen från förr finns kvar, sa jag. Gömd på fem platser.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k7-5-alla-1600.webp" srcset="../bilder/saga/k7-5-alla-800.webp 800w, ../bilder/saga/k7-5-alla-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Och alla kom" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Och alla kom. Mosskungen, väktarna, valen, urmakarna och lysflugorna.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/k7-6-tillsammans-1600.webp" srcset="../bilder/saga/k7-6-tillsammans-800.webp 800w, ../bilder/saga/k7-6-tillsammans-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Ingen kunde väcka henne ensam" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Ingen kunde väcka henne ensam. Men tillsammans kanske.</figcaption>
+    </figure>
+      <p class="vidare"><a class="knapp" href="#slutet">Slutet →</a> <a href="#innehall-lista">Till innehållet</a></p>
+    </div>
+  </section>
+  <section class="kapitel" id="slutet">
+    <header class="kapitelkort">
+      <img decoding="async" src="../bilder/saga/slut-2-gryningen-1600.webp" srcset="../bilder/saga/slut-2-gryningen-800.webp 800w, ../bilder/saga/slut-2-gryningen-1600.webp 1600w" sizes="100vw" alt="Kapitelbild: Slutet" width="1600" height="900" loading="lazy">
+      <div class="kapitelrubrik"><p class="overrubrik">Sagans slut</p><h2>Slutet</h2><p class="rad">Solvinge vaknar, och gryningen kommer hem.</p></div>
+    </header>
+    <div class="inre sidor">
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/slut-1-vaknar-1600.webp" srcset="../bilder/saga/slut-1-vaknar-800.webp 800w, ../bilder/saga/slut-1-vaknar-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: När dagens och nattens ljus lyste tillsammans, guld och silver, öppnade Solvinge ögonen" width="1600" height="900" loading="lazy"></div>
+      <figcaption>När dagens och nattens ljus lyste tillsammans, guld och silver, öppnade Solvinge ögonen.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/slut-2-gryningen-1600.webp" srcset="../bilder/saga/slut-2-gryningen-800.webp 800w, ../bilder/saga/slut-2-gryningen-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Gryningen rullade ut över hela skärgården, skär efter skär" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Gryningen rullade ut över hela skärgården, skär efter skär.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/slut-3-hemfarden-1600.webp" srcset="../bilder/saga/slut-3-hemfarden-800.webp 800w, ../bilder/saga/slut-3-hemfarden-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Pyre och Nos flög hem bredvid henne, över allt de hade sett" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Pyre och Nos flög hem bredvid henne, över allt de hade sett.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/slut-4-hemma-1600.webp" srcset="../bilder/saga/slut-4-hemma-800.webp 800w, ../bilder/saga/slut-4-hemma-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: I Lyktgläntan väntade jag med filtar och varm saft" width="1600" height="900" loading="lazy"></div>
+      <figcaption>I Lyktgläntan väntade jag med filtar och varm saft. Alla fick plats, även de som kom sist.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/slut-5-borjan-1600.webp" srcset="../bilder/saga/slut-5-borjan-800.webp 800w, ../bilder/saga/slut-5-borjan-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Och när kvällen kom tändes lyktorna igen, för natten är också ljus" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Och när kvällen kom tändes lyktorna igen, för natten är också ljus. Slut. Eller kanske en början.</figcaption>
+    </figure>
+      <p class="vidare"><a class="knapp" href="#askan">Och Askan då? →</a> <a href="#innehall-lista">Till innehållet</a></p>
+    </div>
+  </section>
+  <section class="kapitel" id="askan">
+    <header class="kapitelkort">
+      <img decoding="async" src="../bilder/saga/askan-4-tillsammans-1600.webp" srcset="../bilder/saga/askan-4-tillsammans-800.webp 800w, ../bilder/saga/askan-4-tillsammans-1600.webp 1600w" sizes="100vw" alt="Kapitelbild: Och Askan då?" width="1600" height="900" loading="lazy">
+      <div class="kapitelrubrik"><p class="overrubrik">Efter sagan</p><h2>Och Askan då?</h2><p class="rad">Den grå draken blir varm till slut.</p></div>
+    </header>
+    <div class="inre sidor">
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/askan-1-varmen-1600.webp" srcset="../bilder/saga/askan-1-varmen-800.webp 800w, ../bilder/saga/askan-1-varmen-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: När Solvinge vaknade blev det varmt i hela skärgården, ända in i Askans hjärta" width="1600" height="900" loading="lazy"></div>
+      <figcaption>När Solvinge vaknade blev det varmt i hela skärgården, ända in i Askans hjärta.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/askan-2-elden-1600.webp" srcset="../bilder/saga/askan-2-elden-800.webp 800w, ../bilder/saga/askan-2-elden-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: För första gången frös han inte" width="1600" height="900" loading="lazy"></div>
+      <figcaption>För första gången frös han inte. Askan skrattade, och ut kom en låga av silver och guld.</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/askan-3-vanner-1600.webp" srcset="../bilder/saga/askan-3-vanner-800.webp 800w, ../bilder/saga/askan-3-vanner-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Pyre och Nos tog honom i tassarna" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Pyre och Nos tog honom i tassarna. Vill du flyga med oss?</figcaption>
+    </figure>
+    <figure class="sagosida">
+      <div class="ram"><img decoding="async" src="../bilder/saga/askan-4-tillsammans-1600.webp" srcset="../bilder/saga/askan-4-tillsammans-800.webp 800w, ../bilder/saga/askan-4-tillsammans-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 900px" alt="Målning till sagan: Och det ville han" width="1600" height="900" loading="lazy"></div>
+      <figcaption>Och det ville han. Sov gott nu, lilla vän. I morgon flyger vi igen.</figcaption>
+    </figure>
+      <p class="vidare"><span class="slutord">Sov gott.</span> <a href="#innehall-lista">Till innehållet</a></p>
+    </div>
+  </section>
+
+  <section class="del morkpergament">
+    <div class="inre smal mitt om-boken">
+      <p class="overrubrik">Om boken</p>
+      <p>Sagan finns också att spela i <a href="../dragonaventyret/">Pyre och Nos: Glödvägen</a>. Berättelsen, världen och figurerna är MLZ AB:s. Målningarna är gjorda med OpenAI:s bildverktyg, i samma stil som i spelet.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="fot">
+  <div class="inre">
+    <div>
+      <p class="fot-rubrik">Sagoboken</p>
+      <p>Sagan ur Glödvägen, berättad av Gammelmor Glimma.</p>
+    </div>
+    <div>
+      <p class="fot-rubrik">Spel</p>
+      <ul>
+        <li><a href="../dragonaventyret/">Glödvägen</a></li>
+        <li><a href="../draklekar/">Draklekar</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="fot-rubrik">Mer</p>
+      <ul>
+        <li><a href="../">MLZ AB</a></li>
+        <li><a href="../himlaskaren/">Himlaskären</a></li>
+        <li><a href="mailto:contact@mlz-labs.com">Kontakt</a></li>
+      </ul>
+    </div>
+    <p class="liten">© 2026 MLZ AB, org.nr 559491-0407. Alla rättigheter förbehållna; texter och namnen Pyre och Nos, Glödvägen, Draklekar och Himlaskären tillhör MLZ AB. Målningarna är gjorda med OpenAI:s bildverktyg. Typsnitten <a href="/typsnitt/OFL-IMFellEnglish.txt">IM Fell English</a> och <a href="/typsnitt/OFL.txt">Baloo 2</a> används under SIL Open Font License. Webbplatsen räknar besök anonymt med Cloudflare Web Analytics, utan kakor.</p>
+  </div>
+</footer>
+
+<script src="../syns.js"></script>
+<!-- Cloudflare Web Analytics: räknar besök anonymt, utan kakor -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "9c8eac4a6fa944ed99d2a3144f2672da"}'></script>
+</body>
+</html>

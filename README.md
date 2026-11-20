@@ -13,6 +13,7 @@ webbplats på en domän som hör till företaget.
 | Pyre och Nos: Draklekar | `draklekar/index.html` |
 | Himlaskären (världen bakom spelen) | `himlaskaren/index.html` |
 | Integritet, Draklekar | `draklekar/integritet.html` |
+| Sagoboken: hela sagan ur Glödvägen att läsa högt | `sagoboken/index.html` (byggs av `bygg.py` i williams-game-projektets bilderbok; bilderna i `bilder/saga/`) |
 
 Integritetssidornas adresser kan klistras in direkt i App Store Connect
 ("Privacy Policy URL"), till exempel `https://mlz-labs.com/dragonaventyret/integritet.html`.
