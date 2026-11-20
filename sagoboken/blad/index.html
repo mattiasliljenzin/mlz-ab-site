@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bläddra i sagoboken · Pyre och Nos och den första gryningen · MLZ AB</title>
+  <meta name="description" content="Bläddra i sagoboken Pyre och Nos och den första gryningen, sagan ur Glödvägen berättad av Gammelmor Glimma.">
+  <link rel="canonical" href="https://mlz-labs.com/sagoboken/blad/">
+  <meta property="og:title" content="Bläddra i sagoboken: Pyre och Nos och den första gryningen">
+  <meta property="og:image" content="https://mlz-labs.com/bilder/dela/sagoboken.jpg">
+  <meta property="og:url" content="https://mlz-labs.com/sagoboken/blad/">
+  <meta name="theme-color" content="#0b1526">
+  <link rel="icon" type="image/png" href="../../bilder/mlz/favicon.png">
+  <link rel="preload" href="../../typsnitt/Baloo2-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face { font-family: "Baloo 2"; src: url("../../typsnitt/Baloo2-Bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+    @font-face { font-family: "IM Fell English"; src: url("../../typsnitt/IMFellEnglish-Regular.woff2") format("woff2"); font-display: swap; }
+    :root { --natt: #0b1526; --guld: #f2c66b; --text: #f4ead6; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: radial-gradient(ellipse at 50% 40%, #1d3157 0%, var(--natt) 70%); color: var(--text); font-family: "Baloo 2", system-ui, sans-serif; overflow: hidden; }
+    .rum { height: 100dvh; display: grid; grid-template-rows: auto 1fr auto; padding: max(10px, env(safe-area-inset-top)) 16px max(10px, env(safe-area-inset-bottom)); }
+    .topp { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .topp a { color: var(--text); text-decoration: none; font-size: 0.95rem; opacity: 0.85; }
+    .topp a:hover { opacity: 1; color: var(--guld); }
+    .titel { font-family: "IM Fell English", Georgia, serif; font-size: 1.15rem; text-align: center; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    select { font: inherit; font-size: 0.95rem; color: var(--text); background: rgba(255,255,255,0.1); border: 1px solid rgba(242,198,107,0.4); border-radius: 999px; padding: 6px 12px; max-width: 46vw; }
+    select option { color: #2b2118; }
+    .scen { min-height: 0; overflow: hidden; padding: 8px 0; }
+    #bok { width: 100%; height: 100%; }
+    .blad { background: #f7efde; }
+    .blad img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .fot { display: flex; align-items: center; justify-content: center; gap: 18px; }
+    .knapp { font: inherit; font-size: 1.05rem; border: 0; border-radius: 999px; padding: 10px 22px; background: linear-gradient(180deg, #f2c66b, #c9902c); color: #0b1526; cursor: pointer; min-width: 120px; }
+    .knapp:disabled { opacity: 0.35; cursor: default; }
+    .knapp:focus-visible, select:focus-visible, .topp a:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+    #sida { min-width: 6em; text-align: center; font-size: 0.95rem; opacity: 0.85; }
+    .tips { text-align: center; font-size: 0.85rem; opacity: 0.6; margin: 4px 0 0; }
+    @media (max-width: 560px) { .titel { display: none; } .knapp { min-width: 0; padding: 10px 18px; } }
+  </style>
+</head>
+<body>
+<div class="rum">
+  <header class="topp">
+    <a href="../">← Sagoboken</a>
+    <div class="titel">Pyre och Nos och den första gryningen</div>
+    <label><span hidden>Gå till kapitel</span>
+      <select id="kapitel" aria-label="Gå till kapitel">
+        <option value="0">Början</option>
+        <option value="4">Kapitel ett: Skolvägen</option>
+        <option value="15">Kapitel två: Skären vaknar</option>
+        <option value="24">Kapitel tre: Över Solbron</option>
+        <option value="33">Kapitel fyra: Till världens kant</option>
+        <option value="42">Kapitel fem: Silverspåret</option>
+        <option value="51">Kapitel sex: Askans val</option>
+        <option value="61">Kapitel sju: Den första gryningen</option>
+        <option value="68">Slutet</option>
+        <option value="73">Och Askan då?</option>
+      </select>
+    </label>
+  </header>
+  <main class="scen">
+    <div id="bok">
+      <div class="blad"><img src="../../bilder/saga/blad/01.webp" alt="Omslag: Pyre och Nos och den första gryningen. Sagan ur Glödvägen." width="1600" height="1131"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/02.webp" alt="Titelsida: Pyre och Nos och den första gryningen. Sagan ur Glödvägen, berättad av Gammelmor Glimma." width="1600" height="1131"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/03.webp" alt="Glimma: Kom närmare, lilla vän, och ta en filt. Nu ska jag berätta om två små drakar som gick ut i världen för att hämta hem ljuset. Det är en lång saga, så vi tar ett kapitel i kväll och nästa i morgon." width="1600" height="1131"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/04.webp" alt="Kartan: Det här är Himlaskären, där vi bor." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/05.webp" alt="Kapitel ett. Skolvägen. Den första vägen hemma i skogen: sju lyktor och en gryning." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/06.webp" alt="För länge, länge sedan föll en stjärna ner i molnen. Den låg där och glödde, och ur glöden kläcktes den allra första draken. Hon hette Solvinge." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/07.webp" alt="Solvinge blåste varm eld på stenarna som flöt i molnen. Då steg stenarna uppåt och blev små öar, med skog och ängar och små hus. Det är Himlaskären." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/08.webp" alt="Lysflugorna och urmakarna byggde ett stort hjul som bar ljuset runt, så att alla fick både dag och natt. Men hjulet blev gammalt. En dag glömde det hur man gör, och då kom skymningen." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/09.webp" alt="Där ljuset tog slut växte törnen, och kalla vindar började blåsa. Folk glömde de gamla vägarna, och ibland varandra. Det kallas Glömskan. Men vänta bara, nu kommer det fina." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/10.webp" alt="En kväll flög lysflugan Lysa in under Stora Ekens rötter. Där låg två ägg, alldeles kalla. Lysa höll sin lilla ekollonlykta tätt intill dem och bar hem dem, så försiktigt hon bara kunde." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/11.webp" alt="Hela vintern väntade vi. Jag stickade filtar och Lysa lyste, och alla i gläntan kom förbi och tittade. Och en natt hördes det: knack, knack. Äggen sprack!" width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/12.webp" alt="Ur det ena ägget kom en drakunge med eld som guld. Det var Pyre. Ur det andra kom en drakunge med eld som klart vatten. Det var Nos. De nyste, och små gnistor flög över hela golvet." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/13.webp" alt="Sju lyktor gör en gryning, sa jag till dem. Gå Glödvägen och tänd dem, en i taget. Värm, så flyger ni." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/14.webp" alt="Det blåste kallt i Kalla vinden, och uppe i Ekollonkronan sov en väktare som inte ville vakna. Men Pyre och Nos hjälptes åt. Den ena värmde och den andra lyste, och lykta efter lykta tändes längs vägen." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/15.webp" alt="När den sjunde lyktan tändes uppe vid Stormklockan hände något som ingen hade sett på länge. Det blev morgon i gläntan. Riktig morgon, med sol." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/16.webp" alt="Kapitel två. Skären vaknar. Ut över molnhavet till fyren och de sovande skären." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/17.webp" alt="Sju lyktor brann i Stora Eken, och alla vänner från skolvägen kom för att vinka: ugglorna, den gamla ekostubben och ett helt moln av lysflugor. Pyre och Nos vinkade tillbaka tills tassarna blev trötta." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/18.webp" alt="Men när kvällen kom såg Nos något på en gren långt borta. En grå drake, med vingar som var lite för stora. Den tittade på dem en stund. Sedan flög den sin väg." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/19.webp" alt="Lysa flög upp högst i trädet, och drakarna klättrade efter. Titta, sa hon och pekade. Därute, över molnhavet, vaknar skären." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/20.webp" alt="Allra längst bort stod en gammal fyr på en klippa. Ingen hade tänt den på länge, länge. Fåglarna hade byggt bon på balkongen." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/21.webp" alt="Jag packade en liten väska till var och en: en filt, en glödsten och en kaka. Man ska aldrig ge sig ut utan kaka. Och var rädda om varandra, sa jag." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/22.webp" alt="Och så flög de ut över molnhavet, längre bort än de någonsin hade varit. Lysa flög före med sin lykta, och bakom dem blev gläntan mindre och mindre." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/23.webp" alt="Uppe i fyren stod en stor lampa, kall och dammig. Pyre och Nos blåste i den tillsammans, och då vaknade den. Ljuset svepte ut över molnen, långt, långt bort." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/24.webp" alt="Där ljuset nuddade molnen gnäste ett skär sig i sömnen. Det hade sovit så länge att det sjunkit ner i dimman. Nu lyfte det sig, sakta, och det rasslade av glada fåglar." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/25.webp" alt="Kapitel tre. Över Solbron. Den gamla vägen och väktarna som har sovit sedan Glömskan." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/26.webp" alt="Molnvalen bar drakarna hela vägen tillbaka, och fyren lyste efter dem. Valen sjöng en låg, mjuk sång som kittlade i magen." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/27.webp" alt="Från fyrens topp såg de något som ingen hade sett på länge: en bro av sten, ända bort till andra sidan." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/28.webp" alt="Det är Solbron, sa jag och pekade på min gamla karta. Där gick den gamla vägen, innan Glömskan." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/29.webp" alt="Bortom bron sov väktarna. De hade vaktat så länge att de glömt varför." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/30.webp" alt="Men ingen behövde vara rädd. Den som sover vill bara bli väckt varsamt. Pyre och Nos värmde Mosskungens kalla näsa, och han log i sömnen innan han ens hade vaknat." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/31.webp" alt="Så gick de över Solbron, och gläntan blev en liten ljusprick bakom dem." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/32.webp" alt="I Smaragddalen växte kristaller överallt, grå och släckta. Pyres eld fick dem att lysa som honung, och Nos eld fick dem att lysa som mynta. Snart var hela dalen en regnbåge." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/33.webp" alt="I Månljusets rike var det alltid kväll. Där tände drakarna små månlyktor, och framför dem växte vägar av månsken som man kunde gå på." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/34.webp" alt="Kapitel fyra. Till världens kant. Vinden, urtiden, runorna och stjärnorna längst bort." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/35.webp" alt="Mosskungen flyttade hem till Lyktgläntan, och månens väktare lyste dem farväl." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/36.webp" alt="På Solbrons bortersta torn satt den grå draken igen. När drakarna vinkade flög han sin väg, lite för fort, som någon som inte vet vad man gör när någon vinkar." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/37.webp" alt="Vinden ropade från väster. Där börjar vägar som ingen karta visar." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/38.webp" alt="Långt borta fanns en dal där tiden hade somnat, och höga djur betade bland ormbunkarna." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/39.webp" alt="Klippan var för hög att flyga över. Men en långnacke böjde ner sitt huvud, och drakarna fick åka uppöver, hela vägen till toppen. Drakarna nickade tack, och djuret blinkade sakta tillbaka." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/40.webp" alt="Och längst bort av allt låg världens kant, där stjärnorna börjar." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/41.webp" alt="Där ute flöt små stenar bland stjärnorna, och drakarna hoppade från den ena till den andra. Det var det högsta de någonsin hade varit." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/42.webp" alt="Var rädda om varandra, sa jag när de kom hem. Och kom hem till kvällen. Sedan kramade jag dem tills de fnissade." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/43.webp" alt="Kapitel fem. Silverspåret. Vem tar lyktorna? Ett spår av silver leder norrut." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/44.webp" alt="Dygnshjulet vaknade och började snurra. Det mindes allt som det hade sett." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/45.webp" alt="Det visade en bild ur minnet: en grå drake som tog en lykta, försiktigt, som någon som fryser." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/46.webp" alt="Hemma i gläntan saknades två lyktor. Bara en grå fjäder låg kvar i gräset." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/47.webp" alt="Han tar inte för att vara elak, sa jag tyst. Han tar för att han fryser. Han heter Askan." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/48.webp" alt="Ett svagt silverspår glittrade i mörkret, och det ledde norrut." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/49.webp" alt="Först gick spåret till en marknad under rötterna, där alla byter och ingen glömmer." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/50.webp" alt="I Nattvik tog vägen slut vid en mörk sjö. Då kom Askan, utan ett ord. Hans eld lyste silvervit, och i dess ljus syntes en bro av månglas som ingen annan eld kunde se. Sedan var han borta igen." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/51.webp" alt="I Drömbrunnen steg stora, skimrande bubblor, och i varje bubbla fanns en dröm. Drakarna svävade uppåt i dem, mjukt som i en säng." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/52.webp" alt="Kapitel sex. Askans val. Kyla och tystnad uppe i norr, och ett val som ingen kan göra åt någon annan." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/53.webp" alt="De sjunkna skären steg upp ur molnen, ett efter ett, som en trappa." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/54.webp" alt="I Drömbrunnen hade de sett Askans minne: två kalla ägg i snön, och bara det ena kläcktes." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/55.webp" alt="Han tror att han är ensam, sa Lysa vid lägerelden. Men ingen är ensam på riktigt." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/56.webp" alt="Spåret ledde förbi ett torn fullt av klockor, och sedan upp mot det kalla norr." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/57.webp" alt="Under isen på Frostkanten låg det andra ägget, kallt men inte borta. Pyre och Nos smälte isen så varsamt de kunde och bar ägget i famnen, genom norrskenet, till ett varmt bo vid Askbergets port." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/58.webp" alt="Där uppe brann norrskenet, och någonstans i berget fanns en grotta full av lyktor." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/59.webp" alt="Pyre och Nos höll varandra i tassen. Det var dags att möta den grå draken." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/60.webp" alt="Grottan var full av lyktor och ändå kall. Det gamla värmespåret i berget var trasigt, så värmen rann ut genom springorna. Drakarna tände skål efter skål, och Askan tittade från skuggan." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/61.webp" alt="När den sista skålen tändes blev grottan varm, för första gången. Askan stod länge och tittade på sina lyktor. Sedan lyfte han ner en av dem. Den här ska tillbaka, sa han. Ingen bad honom. Han valde själv." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/62.webp" alt="Kapitel sju. Den första gryningen. Alla vänner följer med för att väcka Solvinge." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/63.webp" alt="Nästa morgon stod det en korg vid min dörr. Askan bar själv tillbaka lyktorna, en i taget, och hängde upp dem där de hörde hemma. Ingen hade bett honom om det." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/64.webp" alt="Och i den varma grottan, där det aldrig hade varit varmt förut, sprack det andra ägget. Ut kröp en liten drake med en låga av silver. Hon hette Silversken. Min Askan, sa hon." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/65.webp" alt="Uppe vid stjärnorna vände sig Solvinge i sömnen. Men hon var för kall för att vakna." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/66.webp" alt="Värmen från förr finns kvar, sa jag. Gömd på fem platser." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/67.webp" alt="Och alla kom. Mosskungen, väktarna, valen, urmakarna och lysflugorna." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/68.webp" alt="Ingen kunde väcka henne ensam. Men tillsammans kanske." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/69.webp" alt="Slutet. När dagens och nattens ljus lyste tillsammans, guld och silver, öppnade Solvinge ögonen." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/70.webp" alt="Gryningen rullade ut över hela skärgården, skär efter skär." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/71.webp" alt="Pyre och Nos flög hem bredvid henne, över allt de hade sett." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/72.webp" alt="I Lyktgläntan väntade jag med filtar och varm saft. Alla fick plats, även de som kom sist." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/73.webp" alt="Och när kvällen kom tändes lyktorna igen, för natten är också ljus. Slut. Eller kanske en början." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/74.webp" alt="Och Askan då? När Solvinge vaknade blev det varmt i hela skärgården, ända in i Askans hjärta." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/75.webp" alt="För första gången frös han inte. Askan skrattade, och ut kom en låga av silver och guld." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/76.webp" alt="Pyre och Nos tog honom i tassarna. Vill du flyga med oss?" width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/77.webp" alt="Och det ville han. Sov gott nu, lilla vän. I morgon flyger vi igen." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/78.webp" alt="Vilka bor i Himlaskären: Pyre, Nos, Lysa, Gammelmor Glimma, Askan, Silversken, Solvinge, Mosskungen och alla vänner." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/saga/blad/79.webp" alt="Om boken: Berättelsen, världen och figurerna är MLZ AB:s. Målningarna är gjorda med OpenAI:s bildverktyg." width="1600" height="1131" loading="lazy"></div>
+    </div>
+  </main>
+  <div>
+    <nav class="fot" aria-label="Bläddra">
+      <button class="knapp" id="bak" aria-label="Föregående sida">← Bakåt</button>
+      <span id="sida" aria-live="polite"></span>
+      <button class="knapp" id="fram" aria-label="Nästa sida">Framåt →</button>
+    </nav>
+    <p class="tips">Svep, dra i hörnet eller använd piltangenterna.</p>
+  </div>
+</div>
+<script src="page-flip.js"></script>
+<script>
+(function () {
+  var el = document.getElementById("bok");
+  var pf = new St.PageFlip(el, {
+    width: 1600, height: 1131, size: "stretch",
+    minWidth: 700, maxWidth: 1600, minHeight: 198, maxHeight: 1131,
+    usePortrait: true, showCover: false, maxShadowOpacity: 0.45,
+    mobileScrollSupport: false, flippingTime: 800
+  });
+  pf.loadFromHTML(document.querySelectorAll(".blad"));
+  var n = pf.getPageCount(), sida = document.getElementById("sida"),
+      bak = document.getElementById("bak"), fram = document.getElementById("fram"),
+      val = document.getElementById("kapitel");
+  var starts = [].map.call(val.options, function (o) { return +o.value; });
+  function visa() {
+    var i = pf.getCurrentPageIndex();
+    sida.textContent = (pf.getOrientation() === "landscape" && i + 1 < n ? "Sida " + (i + 1) + "–" + (i + 2) : "Sida " + (i + 1)) + " av " + n;
+    bak.disabled = i <= 0; fram.disabled = i >= n - 1;
+    var r = pf.getOrientation() === "landscape" ? i + 1 : i;
+    var k = 0; starts.forEach(function (s, j) { if (r >= s) k = j; }); val.selectedIndex = k;
+    try { history.replaceState(null, "", "#" + (i + 1)); } catch (e) {}
+  }
+  pf.on("flip", visa); pf.on("changeOrientation", visa);
+  bak.onclick = function () { pf.flipPrev(); };
+  fram.onclick = function () { pf.flipNext(); };
+  val.onchange = function () { pf.turnToPage(+val.value); visa(); };
+  document.addEventListener("keydown", function (e) {
+    if (e.target === val) return;
+    if (e.key === "ArrowRight" || e.key === " ") { pf.flipNext(); e.preventDefault(); }
+    if (e.key === "ArrowLeft") { pf.flipPrev(); e.preventDefault(); }
+  });
+  var start = parseInt(location.hash.slice(1), 10);
+  if (start > 1 && start <= n) pf.turnToPage(start - 1);
+  visa();
+})();
+</script>
+<!-- Cloudflare Web Analytics: räknar besök anonymt, utan kakor -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "9c8eac4a6fa944ed99d2a3144f2672da"}'></script>
+</body>
+</html>
