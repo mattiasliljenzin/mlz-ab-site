@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bläddra i julsagan · Pyre och Nos och julnatten · MLZ AB</title>
+  <meta name="description" content="Bläddra i julsagan Pyre och Nos och julnatten, en julsaga ur glödvägen berättad av Gammelmor Glimma.">
+  <link rel="canonical" href="https://mlz-labs.com/julsagan/blad/">
+  <meta property="og:title" content="Bläddra i julsagan: Pyre och Nos och julnatten">
+  <meta property="og:image" content="https://mlz-labs.com/bilder/dela/julsagan.jpg">
+  <meta property="og:url" content="https://mlz-labs.com/julsagan/blad/">
+  <meta name="theme-color" content="#0b1526">
+  <link rel="icon" type="image/png" href="../../bilder/mlz/favicon.png">
+  <link rel="preload" href="../../typsnitt/Baloo2-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face { font-family: "Baloo 2"; src: url("../../typsnitt/Baloo2-Bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+    @font-face { font-family: "IM Fell English"; src: url("../../typsnitt/IMFellEnglish-Regular.woff2") format("woff2"); font-display: swap; }
+    :root { --natt: #0b1526; --guld: #f2c66b; --text: #f4ead6; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: radial-gradient(ellipse at 50% 40%, #1d3157 0%, var(--natt) 70%); color: var(--text); font-family: "Baloo 2", system-ui, sans-serif; overflow: hidden; }
+    .rum { height: 100dvh; display: grid; grid-template-rows: auto 1fr auto; padding: max(10px, env(safe-area-inset-top)) 16px max(10px, env(safe-area-inset-bottom)); }
+    .topp { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .topp a { color: var(--text); text-decoration: none; font-size: 0.95rem; opacity: 0.85; }
+    .topp a:hover { opacity: 1; color: var(--guld); }
+    .titel { font-family: "IM Fell English", Georgia, serif; font-size: 1.15rem; text-align: center; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    select { font: inherit; font-size: 0.95rem; color: var(--text); background: rgba(255,255,255,0.1); border: 1px solid rgba(242,198,107,0.4); border-radius: 999px; padding: 6px 12px; max-width: 46vw; }
+    select option { color: #2b2118; }
+    .scen { min-height: 0; overflow: hidden; padding: 8px 0; }
+    #bok { width: 100%; height: 100%; }
+    .blad { background: #f7efde; }
+    .blad img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .fot { display: flex; align-items: center; justify-content: center; gap: 18px; }
+    .knapp { font: inherit; font-size: 1.05rem; border: 0; border-radius: 999px; padding: 10px 22px; background: linear-gradient(180deg, #f2c66b, #c9902c); color: #0b1526; cursor: pointer; min-width: 120px; }
+    .knapp:disabled { opacity: 0.35; cursor: default; }
+    .knapp:focus-visible, select:focus-visible, .topp a:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+    #sida { min-width: 6em; text-align: center; font-size: 0.95rem; opacity: 0.85; }
+    .tips { text-align: center; font-size: 0.85rem; opacity: 0.6; margin: 4px 0 0; }
+    @media (max-width: 560px) { .titel { display: none; } .knapp { min-width: 0; padding: 10px 18px; } }
+  </style>
+</head>
+<body>
+<div class="rum">
+  <header class="topp">
+    <a href="../">← Julsagan</a>
+    <div class="titel">Pyre och Nos och julnatten</div>
+    <label><span hidden>Gå till kapitel</span>
+      <select id="kapitel" aria-label="Gå till sidan" hidden>
+        <option value="0">Början</option>
+      </select>
+    </label>
+  </header>
+  <main class="scen">
+    <div id="bok">
+      <div class="blad"><img src="../../bilder/julsaga/blad/01.webp" alt="Omslag: Pyre och Nos och julnatten. En julsaga ur Glödvägen, berättad av Gammelmor Glimma." width="1600" height="1131"></div>
+      <div class="blad"><img src="../../bilder/julsaga/blad/02.webp" alt="Glimma: Kom och krup ner under filten, lilla vän. Ute är det mörkt och snön faller tyst. Det är den bästa tiden för sagor. I kväll ska jag berätta om Pyre och Nos första jul." width="1600" height="1131"></div>
+      <div class="blad"><img src="../../bilder/julsaga/blad/03.webp" alt="En morgon i december var hela Lyktgläntan vit. Pyre och Nos hade aldrig sett snö förut. De fångade flingor på tungan, och varje flinga sa fsss och smälte, för drakar är varma inuti." width="1600" height="1131"></div>
+      <div class="blad"><img src="../../bilder/julsaga/blad/04.webp" alt="I mitt kök luktade det pepparkakor. Jag berättade om julen, när natten är som längst och alla tänder ljus så att mörkret blir mjukt. Pyre åt tre pepparkakor. Nos åt fyra, men bara små." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/julsaga/blad/05.webp" alt="Långt i norr, på Tomteskäret, bor Tomtefar och nissarna. De gör en julklapp till varje barn i skären. På julnatten flyger hans släde över himlen, och främst flyger renen Glödmulen." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/julsaga/blad/06.webp" alt="Sedan stickade jag två röda tomteluvor, en till var. Pyres blev lite för stor och Nos blev lite för lång. Men de var precis lagom." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/julsaga/blad/07.webp" alt="På kvällen satt de i fönstret och tittade mot norr. De väntade och väntade, men inga bjällror hördes. Och stjärnan i norr, som brukar lysa klarast av alla i december, syntes inte alls." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/julsaga/blad/08.webp" alt="Då landade någon i snön mitt i gläntan. En liten rund ren, alldeles frusen, och mulen lyste nästan inte alls. Det var Glödmulen. Han hade flugit vilse i mörkret." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/julsaga/blad/09.webp" alt="Pyre och Nos gick fram, så försiktigt de kunde, och blåste varmt på hans mule. Och sakta, sakta började den glöda igen, röd och varm som ett kol i brasan." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/julsaga/blad/10.webp" alt="Glödmulen tittade mot norr och stampade med hoven. Han ville hem. Jag packade en korg med pepparkakor, och Lysa satte sig mellan hans horn med sin lykta. Flyg försiktigt nu, sa jag." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/julsaga/blad/11.webp" alt="De flög över Frostkanten, där isen glittrar, och norrskenet vajade över dem som gröna band. Glödmulens mule lyste vägen, och drakarna flög tätt intill så att ingen frös." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/julsaga/blad/12.webp" alt="På Tomteskäret var allt mörkt och tyst. Verkstaden stod under snön utan ett enda ljus i fönstren. Det hade blivit så kallt att alla hade somnat." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/julsaga/blad/13.webp" alt="Därinne sov nissarna i korgar med garn, och paketen låg halvt inslagna överallt. Tomtefar sov i gungstolen vid spisen, och spisen var alldeles kall." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/julsaga/blad/14.webp" alt="Pyre och Nos tände spisen med en liten, liten låga. Det sprakade och knastrade, och röken steg ur skorstenen. Snart blev det varmt, och nissarna gäspade och vaknade, en efter en." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/julsaga/blad/15.webp" alt="I morgon var det julafton, så drakarna hjälpte till att slå in. Nos knöt fina rosetter. Pyre trasslade in sig i ett rött snöre ända ut till svansen, och nissarna skrattade så de fick hicka." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/julsaga/blad/16.webp" alt="Då vaknade Tomtefar och gnuggade sig i ögonen. Ho-ho, har jag somnat? God jul, små drakar! Ni har värmt hela min verkstad." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/julsaga/blad/17.webp" alt="Ute på kullen stod den stora granen. Pyre och Nos flög upp och tände stjärnan i toppen tillsammans, guld och turkos på samma gång. Den syntes från varenda skär, ända hem till Lyktgläntan." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/julsaga/blad/18.webp" alt="Vid midnatt drog renarna släden ut i natten, och främst flög Glödmulen med sin glödande mule. Pyre och Nos flög bredvid under den runda månen, och bjällrorna klingade över hela himlen." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/julsaga/blad/19.webp" alt="Under dem sov skären. I varje fönster brann ett litet ljus, och vid varje dörr lämnade släden ett paket. Ingen vaknade, men några barn log i sömnen." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/julsaga/blad/20.webp" alt="I gryningen på julafton kom de hem, trötta och glada. Under vår gran låg två små paket. I vart och ett låg en bjällra från Glödmulens sele och en lapp: Tack för att ni lyste vägen." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/julsaga/blad/21.webp" alt="Sedan dess ställer vi ett ljus i fönstret på julnatten, så att Glödmulen hittar hem. Titta ut i kväll, kanske ser du en liten röd prick långt där uppe. God jul, lilla vän. Sov gott." width="1600" height="1131" loading="lazy"></div>
+      <div class="blad"><img src="../../bilder/julsaga/blad/22.webp" alt="Om boken: Pyre och Nos och julnatten. En julsaga ur spelet Pyre och Nos: Glödvägen, berättad av Gammelmor Glimma. Berättelsen, världen och figurerna är MLZ AB:s, Knivsta. Målningarna är gjorda med OpenAI:s bildverktyg." width="1600" height="1131" loading="lazy"></div>
+    </div>
+  </main>
+  <div>
+    <nav class="fot" aria-label="Bläddra">
+      <button class="knapp" id="bak" aria-label="Föregående sida">← Bakåt</button>
+      <span id="sida" aria-live="polite"></span>
+      <button class="knapp" id="fram" aria-label="Nästa sida">Framåt →</button>
+    </nav>
+    <p class="tips">Svep, dra i hörnet eller använd piltangenterna.</p>
+  </div>
+</div>
+<script src="../../sagoboken/blad/page-flip.js"></script>
+<script>
+(function () {
+  var el = document.getElementById("bok");
+  var pf = new St.PageFlip(el, {
+    width: 1600, height: 1131, size: "stretch",
+    minWidth: 700, maxWidth: 1600, minHeight: 198, maxHeight: 1131,
+    usePortrait: true, showCover: false, maxShadowOpacity: 0.45,
+    mobileScrollSupport: false, flippingTime: 800
+  });
+  pf.loadFromHTML(document.querySelectorAll(".blad"));
+  var n = pf.getPageCount(), sida = document.getElementById("sida"),
+      bak = document.getElementById("bak"), fram = document.getElementById("fram"),
+      val = document.getElementById("kapitel");
+  var starts = [].map.call(val.options, function (o) { return +o.value; });
+  function visa() {
+    var i = pf.getCurrentPageIndex();
+    sida.textContent = (pf.getOrientation() === "landscape" && i + 1 < n ? "Sida " + (i + 1) + "–" + (i + 2) : "Sida " + (i + 1)) + " av " + n;
+    bak.disabled = i <= 0; fram.disabled = i >= n - 1;
+    var r = pf.getOrientation() === "landscape" ? i + 1 : i;
+    var k = 0; starts.forEach(function (s, j) { if (r >= s) k = j; }); val.selectedIndex = k;
+    try { history.replaceState(null, "", "#" + (i + 1)); } catch (e) {}
+  }
+  pf.on("flip", visa); pf.on("changeOrientation", visa);
+  bak.onclick = function () { pf.flipPrev(); };
+  fram.onclick = function () { pf.flipNext(); };
+  val.onchange = function () { pf.turnToPage(+val.value); visa(); };
+  document.addEventListener("keydown", function (e) {
+    if (e.target === val) return;
+    if (e.key === "ArrowRight" || e.key === " ") { pf.flipNext(); e.preventDefault(); }
+    if (e.key === "ArrowLeft") { pf.flipPrev(); e.preventDefault(); }
+  });
+  var start = parseInt(location.hash.slice(1), 10);
+  if (start > 1 && start <= n) pf.turnToPage(start - 1);
+  visa();
+})();
+</script>
+<!-- Cloudflare Web Analytics: räknar besök anonymt, utan kakor -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "9c8eac4a6fa944ed99d2a3144f2672da"}'></script>
+</body>
+</html>
